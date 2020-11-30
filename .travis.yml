@@ -7,3 +7,18 @@ before_install:
 
 script:
   - docker run joegitau/docker-react npm run test -- --coverage
+
+# DEPLOYMENT CONFIG - AWS
+
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "us-west-2"
+#   app: "docker-react"
+#   env: "Docker-env"
+#   bucket_name: "elasticbeanstalk-us-west-2-30902346"
+#   bucket_path: "docker-react" # match app: vaue
+#   on:
+#    branch: master # only deploy from github master branch
+#   access_key_id: €AWS_ACCESS_KEY # randomly genereated env configs within travis-ci
+#   secret_access_key:
+#     secure: "$AWS_SECRET_KEY" # randomly genereated env configs within travis-ci
